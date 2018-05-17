@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <my-header></my-header>
+  <div id="top">
+    <my-header/>
     <nuxt/>
-    <my-lefter></my-lefter>
-    <my-righter></my-righter>
+    <my-lefter/>
+    <my-righter/>
     <my-footer/>
   </div>
 </template>
@@ -24,7 +24,6 @@ export default {
     MyRighter
   },
   created () {
-    // this.init()
   },
   methods: {
     ...mapActions([
@@ -39,21 +38,23 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
+  @import '../assets/css/base.styl'
 .container
 {
   margin: 0 auto;
   width: 70%;
-  height: 100vh;
+  height: 180vh;
   box-shadow: 0px 0px 15px 5px;
   padding: 100px 0;
+  background-color: backColor;
   text-align: center;
 }
 
 .button, .button:visited
 {
   display: inline-block;
-  color: black;
+  color: fontColor1;
   letter-spacing: 1px;
   background-color: #fff;
   border: 2px solid #000;
